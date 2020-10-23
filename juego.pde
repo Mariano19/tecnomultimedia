@@ -9,9 +9,9 @@ class Juego {
   Enemigo [] enemigo;
 
    
-  int velocidad = 1;
-  int cant= 7; //cantidad enemigos
-  int cVivos = 0; //cantidad de enemigos vivos
+  int velocidadMax = 8;
+  int cant= 12; //cantidad enemigos
+  int cVivos;
   int estado = 0; //0:menu,1:Jugar,2:Ganar,3:Perder
   PFont fuenteTitulo;
   PImage fondo,fondo2;
@@ -34,10 +34,8 @@ class Juego {
     textFont(fuenteTitulo);
     textSize(48);
 
-    for ( int i = 0; i < cant; i++ ) {
-      
-      
-      enemigo [i] = new Enemigo(-300, 350, (int)random(velocidad, 7));
+    for ( int i = 0; i < cant; i++ ) {      
+      enemigo [i] = new Enemigo(-300-(i*30), 350+(i*5), (int)random(1,velocidadMax));
       if (enemigo[i].vivo == true) cVivos++;
       
     }
@@ -92,7 +90,7 @@ class Juego {
       }
       image(fondo2,width/2,height/2);
       tiempo.actualizar();
-      //juego.cantidadVivos();
+      juego.cantidadVivos();
     }
   }
 
@@ -117,25 +115,28 @@ class Juego {
       popStyle();
     }
   }
-  /*
+  
   //EVALUA CANTIDAD DE ENEMIGOS VIVOS-MUERTOS
-   //void cantidadVivos(){
-   for ( int i = 0; i < enemigo.length; i++ ) {      
-   if (enemigo[i].vivo == true) cVivos++;
-      }        
+   void cantidadVivos(){
+     println(cVivos);
+     cVivos = 0; //cantidad de enemigos vivos  
+     for ( int i = 0; i < enemigo.length; i++ ) {      
+     if (enemigo[i].vivo == true) cVivos++;
+      }  
+      if (cVivos == 0) estado=2;
    }
-   */
+   
  
 
   //EVALUA COLISIONES DEL MOUSE CON ENEMIGOS
   void colisiones() {
     //println(cant, mouseX, mouseY, enemigo[0].x,contador,enemigo[0].vivo);    
     for ( int i = 0; i < enemigo.length; i++ ) {      
-      if (mouseButton == LEFT && mouseX > enemigo[i].x-30 && mouseX < enemigo[i].x+30 && mouseY > enemigo[i].y-40 && mouseY < enemigo[i].y+40) {
+      if (mouseButton == LEFT && mouseX > enemigo[i].x-25 && mouseX < enemigo[i].x+25 && mouseY > enemigo[i].y-40 && mouseY < enemigo[i].y+40) {
         enemigo[i].morir();  
-        cVivos--;
+        
       }
-      if (cVivos == 0) estado=2;
+      
       //if (enemigo[i].vivo == true) cVivos++;
       //if (enemigo[i].vivo == false ) estado = 2;
     }
