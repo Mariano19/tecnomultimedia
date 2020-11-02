@@ -19,41 +19,41 @@ class Texto {
     fuenteCredito = loadFont("AgencyFB-Reg-48.vlw");
 
     //Declaración de arreglo texto
-    texto[0] = "                                                              CONTROLES \n                            Presta atencion a las escenas y busca \n                            objetos y pistas que te ayudaran \n                            a tomar las desiciones correctas";
+    texto[0] = "                                                              CONTROLES \n                            Prestá atencion a las escenas y buscá \n                            objetos y pistas que te ayudaran \n                            a tomar las decisiones correctas";
     texto[1] ="Nuestra historia comienza...";
-    texto[2] ="En un mundo post apocaliptico una pandemia mortal casi extermina a toda la poblacion. \nNos encontramos en nuestro departamento antes de la infeccion y mientras mucha \ngente decidio huir,  preferimos quedarnos en la ciudad permaneciendo aislados en la \nseguridad de nuestro hogar...";
-    texto[3] ="Logramos sobrevivir varios meses racionando los alimentos y el agua que nos quedaban. \nPero el tiempo paso y ahora nos vemos obligados a salir al exterior con el objetivo de \nbuscar suministros o intentar escapar a un lugar mas seguro... \n\n                                                                                                        Elige tu camino...";
+    texto[2] ="En un mundo post apocaliptico, una pandemia mortal casi extermina a toda la poblacion. \nNos encontramos en nuestro departamento antes de la infección y mientras mucha \ngente decidió huir,  preferimos quedarnos en la ciudad permaneciendo aislados en la \nseguridad de nuestro hogar...";
+    texto[3] ="Logramos sobrevivir varios meses racionando los alimentos y el agua que nos quedaban. \nPero el tiempo pasó y ahora nos vemos obligados a salir al exterior con el objetivo de \nbuscar suministros o intentar escapar a un lugar mas seguro... \n\n                                                                                                        Elige tu camino...";
     //2
-    texto[4] ="Ya no me queda mucha comida, tengo que salir a buscar provisiones o irme a un lugar \nseguro. Deberia llevar algunas cosas para el viaje como la mochila y un poco de agua. \n...";
-    texto[5] ="Busca en la habitacion objetos utiles para llevar";
+    texto[4] ="Ya no me queda mucha comida, tengo que salir a buscar provisiones o irme a un lugar \nseguro. Debería llevar algunas cosas para el viaje como la mochila y un poco de agua. \n...";
+    texto[5] ="Buscá en la habitacion objetos utiles para llevar";
     //3
-    texto[6] ="Me dirijo caminando al supermercado, si queda algo de comida en la ciudad es alli. \nTengo que tener cuidado de grupos de saqueadores que merodean por el lugar. \nLo mejor seria volver antes del anochecer";
-    texto[7] ="Mientras voy caminando escucho un ruido fuerte en un callejon";
+    texto[6] ="Me dirijo caminando al supermercado, si queda algo de comida en la ciudad es allí. \nTengo que tener cuidado de grupos de saqueadores que merodean por el lugar. \nLo mejor sería volver antes del anochecer";
+    texto[7] ="Mientras voy caminando escucho un ruido fuerte en un callejón";
     //4
     texto[8] = "El centro de refugiados se encuentra a las afueras de la ciudad, es un camino largo. \n...";
     //5
-    texto[9] ="Llego al supermercado y esta desierto, quedan algunas en latas y una botella de agua. \nQuizas en las gondolas del fondo encuentre algo mas...";
-    texto[10] ="Busca comida y cosas utiles";
+    texto[9] ="Llego al supermercado y está desierto, quedan algunas latas y una botella de agua. \nQuizá en las gondolas del fondo encuentre algo más...";
+    texto[10] ="Buscá comida y cosas útiles";
     //6
-    texto[11] ="Me encuentro con un perro que ve sediento y lastimado...";
+    texto[11] ="Me encuentro con un perro que se ve sediento y lastimado...";
     //7
     texto[12] ="Voy caminando por el campo, el centro de refugiados no debe estar tan lejos. \nMenos mal que traje agua en la mochila...";
-    texto[13] ="Despues de una larga caminata el camino se divide en dos. Hay un camion abandonado \ncon un cartel mal pintado indicando girar a izquierda. Pero en el mapa dice que \ntodavia faltan 2 kilometros ..";
+    texto[13] ="Despues de una larga caminata el camino se divide en dos. Hay un camión abandonado \ncon un cartel mal pintado indicando girar a izquierda. Pero en el mapa dice que \ntodavía faltan 2 kilometros ..";
     //8
-    texto[14] ="La estacion de servicio se encuentra destruida, quedan algunos vehiculos pero ninguno \nparece funcionar... ";
+    texto[14] ="La estación de servicio se encuentra destruida, quedan algunos vehículos pero ninguno \nparece funcionar... ";
     //9
     texto[15] = "En el estacionamiento quedaron algunos autos abandonados. Luego de buscar encuentro \nuno con los vidrios rotos pero las llaves puestas";
     texto[16] = "No parece estar en buen estado pero sorprendentemente despues de varios intentos \narranca aunque con poco combustible...";
-    texto [17] = "Busca en la escena mas combustible";
+    texto [17] = "Buscá en la escena más combustible";
     texto [18] = "Ya con todo preparado empiezo a conducir por la autopista...";
     //10
-    texto [19] ="Despues de ayudar al perro llego al supermercado y esta desierto, quedan algunas en latas \ny una botella de agua. Quizas en las gondolas del fondo encuentre algo mas...";
-    texto [20] ="Busca comida y cosas utiles";
-    texto [21] ="Me llevo todo lo que encontre y para mi sorpresa el perrito que ayude me esta \nesperando en la puerta, moviendo la cola. \nYa esta anocheciendo, mejor vuelvo a casa con mi nuevo amigo...";
+    texto [19] ="Despues de ayudar al perro llego al supermercado y está desierto, quedan algunas en latas \ny una botella de agua. Quizá en las gondolas del fondo encuentre algo más...";
+    texto [20] ="Buscá comida y cosas utiles";
+    texto [21] ="Me llevo todo lo que encontre y para mi sorpresa el perrito que ayudé me esta \nesperando en la puerta, moviendo la cola. \nYa está anocheciendo, mejor vuelvo a casa con mi nuevo amigo...";
     //11
     texto[22] ="Despues de conducir un rato empiezo a perder potencia en el motor. \nYa no me queda nada de combustibe... ";
     //12
-    texto[23]="Ya es de noche. Camino a casa me encuentro a un grupo de supervivientes armados y no \nparecen amistosos. Llegue a contar hasta tres de ellos y no creo poder abatir a todos. \nRapidamente uno de ellos me amenaza para que le entregue la comida... ";
+    texto[23]="Ya es de noche. Camino a casa me encuentro a un grupo de supervivientes armados y no \nparecen amistosos. Llegué a contar hasta tres de ellos y no creo poder abatir a todos. \nRapidamente uno de ellos me amenaza para que le entregue la comida... ";
     //13
     texto[24] = "Llegamos al centro de refugiados a salvo!!..";
     texto[25] ="Volvemos a casa a salvo!!..";
