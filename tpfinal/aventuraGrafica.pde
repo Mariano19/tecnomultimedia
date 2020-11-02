@@ -22,9 +22,9 @@ class AventuraGrafica {
     pantalla = new Pantalla();
   }
 
-  void actualizar() {
-    texto.dibujar();
+  void actualizar() {    
     pantalla.dibujar();
+    texto.dibujar();
   }
 
   void clickpantalla() {
@@ -32,7 +32,7 @@ class AventuraGrafica {
     //-----------------------------------------------------
     //Pantalla 0
     if (estado==0) {
-      //sonido.play();
+      sonido.play();
       //boton "EMPEZAR"
       if ( clickRectangulo (width/6, height-200, 200, 40 )) {
         estado = 1;
@@ -47,7 +47,7 @@ class AventuraGrafica {
     //-----------------------------------------------------
     //Pantalla 1
     if (estado==1) {
-      //sonido.pause();
+      sonido.pause();
       contador(5); 
       //pase a pantalla2
       if (contadorClicks == 4) {
