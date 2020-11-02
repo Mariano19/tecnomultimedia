@@ -201,7 +201,7 @@ class Pantalla {
 
       //Loop
       if (v > 2000 ) {
-        v = 0;        
+        v = 0;
       }
     }
   }
@@ -249,5 +249,249 @@ class Pantalla {
       text(texto, mouseX - texto.length()*5, mouseY);
     }
     popStyle();
+  }
+
+  void clickPantalla() {
+    println ("contador" + aventura.contadorClicks, mouseX, mouseY, "MAPA", aventura.mapa, "ARMA", aventura.arma, "AGUA", aventura.agua, "NAFTA", aventura.bidon);
+    //-----------------------------------------------------
+    //Pantalla 0
+    if (aventura.estado==0) {
+      //sonido.play();
+      //boton "EMPEZAR"
+      if (aventura.clickRectangulo (width/6, height-200, 200, 40 )) {
+        aventura.estado = 1;
+        aventura.reset();
+      }
+      //boton "CREDITOS"
+      else if ( aventura.clickRectangulo (width/6, height-100, 200, 40 )) {
+        aventura.estado = 99;
+        aventura.reset();
+      }
+    }
+    //-----------------------------------------------------
+    //Pantalla 1
+    if (aventura.estado==1) {
+      //sonido.pause();
+      aventura.contador(5); 
+      //pase a pantalla2
+      if (aventura.contadorClicks == 4) {
+        aventura.estado = 2;
+        aventura.reset();
+      }
+    }
+    //-----------------------------------------------------
+    //Pantalla 2
+    if (aventura.estado==2) {      
+      aventura.contador(3);
+      //botones
+      if (aventura.clickRectangulo(width/2.6, height/1.3, 600, 30) && aventura.mapa == true && aventura.agua == true ) {
+        aventura.estado = 3;
+        aventura.reset();
+      } else if (aventura.clickRectangulo(width/3.75, height/1.3+50, 400, 30) && aventura.mapa == true && aventura.agua == true) {
+        aventura.estado = 4;
+        aventura.reset();
+      } else if (aventura.clickRectangulo(width/2.95, height/1.3+100, 600, 30) && aventura.mapa == true && aventura.agua == true) {
+        aventura.estado = 2;
+        aventura.reset();
+      }  
+      //escena
+      if (aventura.clickRectangulo(width/2, height/2.2, 50, 50)) {
+        aventura.agua = true;
+      } else if (aventura.clickRectangulo(width/1.2, height/1.5, 50, 50)) {
+        aventura.mapa = true;
+      }
+    }
+
+    //-----------------------------------------------------
+    //Pantalla 3
+    if (aventura.estado==3) {      
+      aventura.contador(3);
+      //botones 
+      if (aventura.contadorClicks >= 2 && aventura.clickRectangulo(width/3.3, height/1.3, 400, 30)) {
+        aventura.estado = 5;
+        aventura.reset();
+      } else if (aventura.contadorClicks >= 2 && aventura.clickRectangulo(width/4.7, height/1.3+50, 200, 30)) {
+        aventura.estado = 6;
+        aventura.reset();
+      }
+    }
+
+    //-----------------------------------------------------
+    //Pantalla 4
+    if (aventura.estado==4) {    
+      aventura.contador(3);
+      //botones 
+      if (aventura.contadorClicks >= 1 && aventura.clickRectangulo(width/3, height/1.3, 600, 30)) {
+        aventura.estado = 7;
+        aventura.reset();
+      } else if (aventura.contadorClicks >= 1 && aventura.clickRectangulo(width/3.1, height/1.3+50, 600, 30)) {
+        aventura.estado = 8;
+        aventura.reset();
+      } else if (aventura.contadorClicks >= 1 && aventura.clickRectangulo(width/3, height/1.3+100, 600, 30)) {
+        aventura.estado = 9;
+        aventura.reset();
+      }
+    }
+
+    //-----------------------------------------------------
+    //Pantalla 5
+    if (aventura.estado==5) {
+      aventura.contador(3);
+      //botones
+      if (aventura.clickRectangulo(width/3.3, height/1.3, 500, 30) && aventura.arma == true) {
+        aventura.estado = 12;
+        aventura.reset();
+      } else if (aventura.clickRectangulo(width/2.6, height/1.3+50, 700, 30) && aventura.arma == true) {
+        aventura.estado = 13;
+        aventura.reset();
+      }  
+      //escena
+      if (aventura.clickRectangulo(width/1.1, height/1.7, 50, 50)) {
+        aventura.arma = true;
+        println("click arma");
+      }
+    }
+
+    //-----------------------------------------------------
+    //Pantalla 6
+    if (aventura.estado==6) {
+      aventura.contador(3);
+      //botones
+      if (aventura.contadorClicks >= 1 && aventura.clickRectangulo(width/2.8, height/1.3, 600, 30)) {
+        aventura.estado = 10;
+        aventura.reset();
+      } else if (aventura.contadorClicks >= 1 && aventura.clickRectangulo(width/3.35, height/1.3+50, 600, 30)) {
+        aventura.estado = 5;
+        aventura.reset();
+      }
+    }
+    //-----------------------------------------------------
+    //Pantalla 7
+    if (aventura.estado==7) {
+      aventura.contador(3);
+      //botones
+      if (aventura.contadorClicks >= 1 && aventura.clickRectangulo(width/3, height/1.3, 600, 30)) {
+        aventura.estado = 13;
+        aventura.reset();
+      } else if (aventura.contadorClicks >= 1 && aventura.clickRectangulo(width/3.6, height/1.3+50, 600, 30)) {
+        aventura.estado = 15;
+        aventura.reset();
+      }
+    }
+    //-----------------------------------------------------
+    //Pantalla 8
+    if (aventura.estado==8) {
+      aventura.contador(3);
+      //boton estacionamiento
+      if (aventura.contadorClicks >= 1 && aventura.clickRectangulo(width/3, height/1.3, 600, 30)) {
+        aventura.estado = 9;
+        aventura.reset();
+      } else if (aventura.contadorClicks >= 1 && aventura.clickRectangulo(width/2.7, height/1.3+50, 600, 30)) {
+        aventura.estado = 7;
+        aventura.reset();
+      }
+    }
+    //-----------------------------------------------------
+    //Pantalla 9
+    if (aventura.estado==9) {
+      aventura.contador(5);
+      //pase a pantalla11
+      if (aventura.contadorClicks >= 4 && aventura.bidon == true && aventura.clickRectangulo (width - 50, height -118, 40, 80)) {
+        aventura.estado = 11;
+        aventura.reset();
+      }
+      //escena
+      if (aventura.clickRectangulo(width/1.2, height/1.7, 50, 50)) {
+        aventura.bidon = true;
+        println("click bidon");
+      }
+    }
+
+    //-----------------------------------------------------
+    //Pantalla 10
+    if (aventura.estado==10) {
+      aventura.contador(4);
+      //pase a pantalla12
+      if (aventura.contadorClicks >= 2 && aventura.arma == true) {
+        aventura.estado = 12;
+        aventura.reset();
+      }  
+      //escena
+      if (aventura.clickRectangulo(width/1.1, height/1.7, 50, 50)) {
+        aventura.arma = true;
+        println("click arma");
+      }
+    }
+
+    //-----------------------------------------------------
+    //Pantalla 11
+    if (aventura.estado==11) {
+      aventura.contador(3);
+      //botones sigo buscando
+      if (aventura.contadorClicks >= 1 && aventura.clickRectangulo(width/2.25, height/1.3, 600, 30)) {
+        aventura.estado = 13;
+        aventura.reset();
+      } else if (aventura.contadorClicks >= 1 && aventura.clickRectangulo(width/2.6, height/1.3+50, 600, 30)) {
+        aventura.estado = 15;
+        aventura.reset();
+      }
+    }
+
+    //-----------------------------------------------------
+    //Pantalla 12
+    if (aventura.estado==12) {
+      aventura.contador(4);
+      //botones
+      if (aventura.contadorClicks >= 1 && aventura.clickRectangulo(width/2.9, height/1.3, 600, 30)) {
+        aventura.estado = 13;
+        aventura.reset();
+      } else if (aventura.contadorClicks >= 1 && aventura.clickRectangulo(width/4.7, height/1.3+50, 600, 30)) {
+        aventura.estado = 14;
+        aventura.reset();
+      } else if (aventura.contadorClicks >= 1 && aventura.clickRectangulo(width/2.65, height/1.3+100, 600, 30)) {
+        aventura.estado = 13;
+        aventura. reset();
+      }
+    }
+
+    //----------------------------------------------------
+    //Pantalla 13 //FINALES DE GANASTE
+    if (aventura.estado==13) {
+      aventura.contador(2);
+      //boton "CREDITOS"
+      if (aventura.contadorClicks >= 1 && aventura.clickRectangulo(width/2, height/1.2, 400, 30)) {
+        aventura.estado = 99;
+        aventura.reset();
+        aventura.mapa = false;
+        aventura.arma = false;
+        aventura.agua = false;
+        aventura.bidon = false;
+      }
+    }
+
+    //-----------------------------------------------------
+    //Pantalla 14 //PERDISTE
+    if (aventura.estado==14) {
+      aventura.contador(2);
+      //boton "VOLVER AL INICIO"
+      if (aventura.contadorClicks >= 1 && aventura.clickRectangulo(width/2, height/1.2, 400, 30)) {
+        aventura.reset();
+        aventura.estado = 0;
+        aventura.mapa = false;
+        aventura.arma = false;
+        aventura.agua = false;
+        aventura.bidon = false;
+      }
+    }
+
+    //-----------------------------------------------------
+    //Pantalla 15//creditos
+    if (aventura.estado==99) {
+      //sonido.pause();
+      if (aventura.clickRectangulo(width/2, height/1.2, 400, 30)) {
+        aventura.reset();
+        aventura.estado = 0;
+      }
+    }
   }
 }
