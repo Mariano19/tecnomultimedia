@@ -24,35 +24,22 @@ Minim minim;
 AudioPlayer sonido;
 AudioSample sonido2;
 
-//Variables globales
-float posY;
-int contadorClicks, estado, vTexto, vDialogo = 0;
-PFont fuenteTitulo, fuenteTexto, fuenteCredito;
-boolean mapa, agua, arma, bidon; 
+AventuraGrafica aventura;
 
-//arrays
-int c = 20 ;
-PImage[] imagen = new PImage[c];
-String[] texto = new String[27];
+
+
 
 void setup() {
   
   size( 1024, 768);
   surface.setResizable(true);
-  colorMode(RGB);
-  cursor (ARROW);
-  rectMode(CENTER);
-  textAlign(LEFT);
-  estado = 0;
+  
   
   minim = new Minim(this);
   sonido = minim.loadFile("musica.mp3",2048);
   sonido2 = minim.loadSample("musica.mp3",512);
   
-  //cargo imagenes
-  for (int i = 0; i < c; i++) {    
-    imagen[i] = loadImage("imagen-" + i + ".png");
-  }
+  
   //cargo texto
   //1
   texto[0] = "                                                              CONTROLES \n                            Presta atencion a las escenas y busca \n                            objetos y pistas que te ayudaran \n                            a tomar las desiciones correctas";
