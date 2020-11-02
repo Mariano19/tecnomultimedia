@@ -20,7 +20,6 @@ import ddf.minim.*;
  99:creditos
  */
 //sonido
-
 Minim minim;
 AudioPlayer sonido;
 AudioSample sonido2;
@@ -30,22 +29,18 @@ AventuraGrafica aventura;
 void setup() {  
   size( 1024, 768);
   surface.setResizable(true);
-  
   aventura = new AventuraGrafica();
   
   minim = new Minim(this);
   sonido = minim.loadFile("musica.mp3",2048);
   sonido2 = minim.loadSample("musica.mp3",512);  
-  
 }
 
 void draw() {  
   background(255);
-  aventura.actualizar();
- 
+  aventura.actualizar(); 
 }
 
 void mousePressed() {  
-  aventura.clickpantalla();
-  
+  aventura.clickPantalla();  
 }
