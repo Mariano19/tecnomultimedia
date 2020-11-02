@@ -4,6 +4,7 @@
 class Texto {
   //-----------------------------------------------------
   ////PROPIEDADES
+  int vDialogo, vTexto = 0;
   PFont fuenteTitulo, fuenteTexto, fuenteCredito;
   String[] texto = new String[27];
 
@@ -62,8 +63,14 @@ class Texto {
 
   //-----------------------------------------------------
   ////METODOS
-  
+
   void dibujar() {
+    //-----------------------------------------------------
+    //Pantalla 0
+    if (aventura.estado==0) {
+      botonesTexto(width/6, height-100, 24, fuenteTitulo, "  creditos   ");
+      botonesTexto(width/6, height-200, 24, fuenteTitulo, "   empezar    ");
+    }
     //-----------------------------------------------------
     //Pantalla 1
     if (aventura.estado==1) {
@@ -246,9 +253,46 @@ class Texto {
     }
 
     //-----------------------------------------------------
-    //Pantalla 15
+    //Pantalla 15//creditos
     if (aventura.estado==99) {
-      // ???
+      //texto creditos
+      textFont(fuenteCredito);
+      textAlign(CENTER);  
+      if (vDialogo > 100 && vDialogo <900) {
+        fill(0, 0, 0, vTexto-150);
+        textSize(21);
+        text("Autor:   Mariano Quattrocchi \n Prof:   Matias Jauregui ", 220, 160);
+      }
+
+      if (vDialogo > 300 && vDialogo <1000) {
+        fill(0, 0, 0, vTexto-300);
+        textSize(18);
+        text("Com. 2", 230, 270);
+      }
+
+      if (vDialogo > 1000) {
+        fill(0, 0, 0, vTexto-700);
+        textSize(21);
+        text("Tecnologia \n Multimedial I", 220, 160);
+      }
+
+      if (vDialogo > 1200 ) {
+        fill(0, 0, 0, vTexto-800);
+        textSize(18);
+        text("UNLP", 230, 270);
+      }
+      botonesTexto(width/2, height/1.2, 24, fuenteTitulo, "    volver al inicio    ");
+
+      //Actualizo variables
+      vDialogo += 3;
+      vTexto += 2;
+      println( vDialogo);
+
+      //Loop
+      if (vDialogo > 2000 ) {
+        vDialogo = 0;
+        vTexto = 0;
+      }
     }
   }
 
