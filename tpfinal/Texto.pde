@@ -213,7 +213,7 @@ class Texto {
 
     //-----------------------------------------------------
     //Pantalla 12
-    if (aventura.estado==12) {
+    if (aventura.devolverEstado()==12) {
       if (aventura.contadorClicks == 0) {
         cuerpoTexto(100, height/1.3, 23, texto[23]);
       } else if (aventura.contadorClicks >= 1) {
@@ -225,7 +225,7 @@ class Texto {
 
     //----------------------------------------------------
     //Pantalla 13
-    if (aventura.estado==13) {
+    if (aventura.estadoIgual(13)) {
       if (  aventura.contadorClicks == 0 && aventura.bidon == true) {
         //panelConBotones();
         cuerpoTexto(100, height/1.3, 23, texto[24]);

@@ -27,9 +27,9 @@ class AventuraGrafica {
     texto.dibujar();
   }
 
- void clickPantalla(){
-   pantalla.clickPantalla();
- }
+  void clickPantalla() {
+    pantalla.clickPantalla();
+  }
 
   //FUNCIONES GLOBALES  
 
@@ -73,5 +73,17 @@ class AventuraGrafica {
     pantalla.v = 0;
     pantalla.posY = 0;
     contadorClicks = 0;
+  }
+
+  int devolverEstado() {
+    return estado;
+  }
+
+  boolean estadoIgual(int aux) {
+    if (estado==aux) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
