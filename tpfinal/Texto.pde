@@ -1,5 +1,3 @@
-//Comentarios: funcion panelConBotones (en pantalla 13 y 14) no existe (¿crear una nueva clase? o crear la funcion en esta clase Texto?)
-//Comentarios: falta pantalla99 (créditos)
 
 class Texto {
   //-----------------------------------------------------
@@ -67,13 +65,13 @@ class Texto {
   void dibujar() {
     //-----------------------------------------------------
     //Pantalla 0
-    if (aventura.estado==0) {
+    if (aventura.estadoIgual(0)) {
       botonesTexto(width/6, height-100, 24, fuenteTitulo, "  creditos   ");
       botonesTexto(width/6, height-200, 24, fuenteTitulo, "   empezar    ");
     }
     //-----------------------------------------------------
     //Pantalla 1
-    if (aventura.estado==1) {
+    if (aventura.estadoIgual(1)) {
       for (int i = 0; i<4; i++) {
         if (aventura.contadorClicks==0) {
           textFont(fuenteCredito);
@@ -89,7 +87,7 @@ class Texto {
 
     //-----------------------------------------------------
     //Pantalla 2
-    if (aventura.estado==2) {
+    if (aventura.estadoIgual(2)) {
       //texto
       if (aventura.contadorClicks == 0) {
         cuerpoTexto(100, height/1.3, 23, texto[4]);
@@ -106,7 +104,7 @@ class Texto {
 
     //-----------------------------------------------------
     //Pantalla 3
-    if (aventura.estado==3) {
+    if (aventura.estadoIgual(3)) {
       if (aventura.contadorClicks == 0) {
         cuerpoTexto(100, height/1.3, 23, texto[6]);
       } else if (aventura.contadorClicks == 1) {
@@ -119,7 +117,7 @@ class Texto {
 
     //-----------------------------------------------------
     //Pantalla 4
-    if (aventura.estado==4) {
+    if (aventura.estadoIgual(4)) {
       if (aventura.contadorClicks == 0) {
         cuerpoTexto(100, height/1.3, 23, texto[8]);
       } else if (aventura.contadorClicks == 1) {
@@ -131,7 +129,7 @@ class Texto {
 
     //-----------------------------------------------------
     //Pantalla 5
-    if (aventura.estado==5) {
+    if (aventura.estadoIgual(5)) {
       if (aventura.contadorClicks == 0) {
         cuerpoTexto(100, height/1.3, 23, texto[9]);
       } else if (aventura.contadorClicks >= 1 && aventura.arma == false) {
@@ -144,7 +142,7 @@ class Texto {
 
     //-----------------------------------------------------
     //Pantalla 6
-    if (aventura.estado==6) {
+    if (aventura.estadoIgual(6)) {
       if (aventura.contadorClicks == 0) {
         cuerpoTexto(100, height/1.3, 23, texto[11]);
       } else if (aventura.contadorClicks >= 1) {
@@ -154,7 +152,7 @@ class Texto {
     }
     //-----------------------------------------------------
     //Pantalla 7
-    if (aventura.estado==7) {
+    if (aventura.estadoIgual(7)) {
       if (aventura.contadorClicks == 0) {
         cuerpoTexto(100, height/1.3, 23, texto[12]);
       } else if (aventura.contadorClicks == 1) {
@@ -166,7 +164,7 @@ class Texto {
     }
     //-----------------------------------------------------
     //Pantalla 8
-    if (aventura.estado==8) {
+    if (aventura.estadoIgual(8)) {
       if (aventura.contadorClicks == 0) {
         cuerpoTexto(100, height/1.3, 23, texto[14]);
       } else if (aventura.contadorClicks >= 1) {
@@ -176,7 +174,7 @@ class Texto {
     }
     //-----------------------------------------------------
     //Pantalla 9
-    if (aventura.estado==9) {
+    if (aventura.estadoIgual(9)) {
       if (aventura.contadorClicks == 0) {
         cuerpoTexto(100, height/1.3, 23, texto[15]);
       } else if (aventura.contadorClicks == 1) {
@@ -190,7 +188,7 @@ class Texto {
 
     //-----------------------------------------------------
     //Pantalla 10
-    if (aventura.estado==10) {
+    if (aventura.estadoIgual(10)) {
       if (aventura.contadorClicks == 0) {
         cuerpoTexto(100, height/1.3, 23, texto[19]);
       } else if (aventura.contadorClicks >= 1 && aventura.arma == false) {
@@ -202,7 +200,7 @@ class Texto {
 
     //-----------------------------------------------------
     //Pantalla 11
-    if (aventura.estado==11) {
+    if (aventura.estadoIgual(11)) {
       if (aventura.contadorClicks == 0) {
         cuerpoTexto(100, height/1.3, 23, texto[22]);
       } else if (aventura.contadorClicks >= 1) {
@@ -213,7 +211,7 @@ class Texto {
 
     //-----------------------------------------------------
     //Pantalla 12
-    if (aventura.devolverEstado()==12) {
+    if (aventura.estadoIgual(12)) {
       if (aventura.contadorClicks == 0) {
         cuerpoTexto(100, height/1.3, 23, texto[23]);
       } else if (aventura.contadorClicks >= 1) {
@@ -241,7 +239,7 @@ class Texto {
 
     //-----------------------------------------------------
     //Pantalla 14
-    if (aventura.estado==14) {
+    if (aventura.estadoIgual(14)) {
       if (aventura.contadorClicks == 0) {
         //panelConBotones();
         cuerpoTexto(100, height/1.3, 23, texto[26]);
@@ -254,7 +252,7 @@ class Texto {
 
     //-----------------------------------------------------
     //Pantalla 15//creditos
-    if (aventura.estado==99) {
+    if (aventura.estadoIgual(99)) {
       //texto creditos
       textFont(fuenteCredito);
       textAlign(CENTER);  
