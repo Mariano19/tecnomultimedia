@@ -75,9 +75,9 @@ class AventuraGrafica {
     contadorClicks = 0;
   }
 
-  int devolverEstado() {
-    return estado;
-  }
+  //int devolverEstado() {
+  //  return estado;
+  //}
 
   boolean estadoIgual(int aux) {
     if (estado==aux) {
