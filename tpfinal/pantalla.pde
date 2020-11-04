@@ -25,7 +25,7 @@ class Pantalla {
   void dibujar() {
     //-----------------------------------------------------
     //Pantalla 0
-    if (aventura.estado==0) {
+    if (aventura.estadoIgual(0)) {
       pushStyle();
       //fondo
       tint(v-100, v-100, v);
@@ -52,14 +52,14 @@ class Pantalla {
     }
     //-----------------------------------------------------
     //Pantalla 1
-    if (aventura.estado==1) {
+    if (aventura.estadoIgual(1)) {
       fondo(5);
       panelConBotones();
     }
 
     //-----------------------------------------------------
     //Pantalla 2
-    if (aventura.estado==2) {
+    if (aventura.estadoIgual(2)) {
       fondo(6);
       panelConBotones();
       detallesEscena(width/3, height/3, 50, 50, "Me queda poca comida");
@@ -69,7 +69,7 @@ class Pantalla {
 
     //-----------------------------------------------------
     //Pantalla 3
-    if (aventura.estado==3) {
+    if (aventura.estadoIgual(3)) {
       fondo(7);
       panelConBotones();
       detallesEscena(width/8, height/1.8, 50, 50, "Es un auto abandonado");
@@ -78,14 +78,14 @@ class Pantalla {
 
     //-----------------------------------------------------
     //Pantalla 4
-    if (aventura.estado==4) {
+    if (aventura.estadoIgual(4)) {
       fondo(8);
       panelConBotones();
     }
 
     //-----------------------------------------------------
     //Pantalla 5
-    if (aventura.estado==5) {
+    if (aventura.estadoIgual(5)) {
       fondo(9);
       panelConBotones();
       detallesEscena(width/7, height/1.8, 50, 50, "La comida fresca esta podrida");
@@ -96,14 +96,14 @@ class Pantalla {
 
     //-----------------------------------------------------
     //Pantalla 6
-    if (aventura.estado==6) {
+    if (aventura.estadoIgual(6)) {
       fondo(10);
       panelConBotones();
       detallesEscena(width/3, height/1.7, 50, 50, "Un perrito");
     }
     //-----------------------------------------------------
     //Pantalla 7
-    if (aventura.estado==7) {
+    if (aventura.estadoIgual(7)) {
       fondo(11);
       panelConBotones();
       detallesEscena(width/7, height/1.8, 50, 50, "El cartel no parece muy confiable");
@@ -111,14 +111,14 @@ class Pantalla {
     }
     //-----------------------------------------------------
     //Pantalla 8
-    if (aventura.estado==8) {
+    if (aventura.estadoIgual(8)) {
       fondo(12);
       panelConBotones();
       detallesEscena(width/3, height/1.8, 50, 50, "La estacion esta destruida");
     }
     //-----------------------------------------------------
     //Pantalla 9
-    if (aventura.estado==9) {
+    if (aventura.estadoIgual(9)) {
       fondo(13);
       panelConBotones();
       detallesEscena(width/3, height/1.9, 50, 50, "El auto esta destruido");
@@ -128,7 +128,7 @@ class Pantalla {
 
     //-----------------------------------------------------
     //Pantalla 10
-    if (aventura.estado==10) {
+    if (aventura.estadoIgual(10)) {
       fondo(9);
       panelConBotones();
       detallesEscena(width/7, height/1.8, 50, 50, "La comida fresca esta podrida");
@@ -139,7 +139,7 @@ class Pantalla {
 
     //-----------------------------------------------------
     //Pantalla 11
-    if (aventura.estado==11) {
+    if (aventura.estadoIgual(11)) {
       fondo(14);
       panelConBotones();
       detallesEscena(width/1.2, height/2.7, 50, 50, "Centro de refugiados a 80km");
@@ -148,7 +148,7 @@ class Pantalla {
 
     //-----------------------------------------------------
     //Pantalla 12
-    if (aventura.estado==12) {
+    if (aventura.estadoIgual(12)) {
       fondo(15);
       panelConBotones();
       detallesEscena(width/2, height/2.4, 50, 50, "No creo que pueda escapar");
@@ -156,7 +156,7 @@ class Pantalla {
 
     //----------------------------------------------------
     //Pantalla 13 //FINALES DE GANASTE
-    if (aventura.estado==13) {
+    if (aventura.estadoIgual(13)) {
       if ( aventura.bidon == true) {
         fondo(16);
       } 
@@ -173,7 +173,7 @@ class Pantalla {
 
     //-----------------------------------------------------
     //Pantalla 14 //PERDISTE
-    if (aventura.estado==14) {
+    if (aventura.estadoIgual(14)) {
       fondo(18);
       if (aventura.contadorClicks == 0) {
         panelConBotones();
@@ -182,7 +182,7 @@ class Pantalla {
 
     //-----------------------------------------------------
     //Pantalla 15//creditos
-    if (aventura.estado==99) {
+    if (aventura.estadoIgual(99)) {
       fondo(19);
       //dialogo1
       imagen[3].resize(200, 0);
@@ -255,7 +255,7 @@ class Pantalla {
     println ("contador" + aventura.contadorClicks, mouseX, mouseY, "MAPA", aventura.mapa, "ARMA", aventura.arma, "AGUA", aventura.agua, "NAFTA", aventura.bidon);
     //-----------------------------------------------------
     //Pantalla 0
-    if (aventura.estado==0) {
+    if (aventura.estadoIgual(0)) {
       //sonido.play();
       //boton "EMPEZAR"
       if (aventura.clickRectangulo (width/6, height-200, 200, 40 )) {
@@ -270,7 +270,7 @@ class Pantalla {
     }
     //-----------------------------------------------------
     //Pantalla 1
-    if (aventura.estado==1) {
+    if (aventura.estadoIgual(1)) {
       //sonido.pause();
       aventura.contador(5); 
       //pase a pantalla2
@@ -281,7 +281,7 @@ class Pantalla {
     }
     //-----------------------------------------------------
     //Pantalla 2
-    if (aventura.estado==2) {      
+    if (aventura.estadoIgual(2)) {      
       aventura.contador(3);
       //botones
       if (aventura.clickRectangulo(width/2.6, height/1.3, 600, 30) && aventura.mapa == true && aventura.agua == true ) {
@@ -304,7 +304,7 @@ class Pantalla {
 
     //-----------------------------------------------------
     //Pantalla 3
-    if (aventura.estado==3) {      
+    if (aventura.estadoIgual(3)) {      
       aventura.contador(3);
       //botones 
       if (aventura.contadorClicks >= 2 && aventura.clickRectangulo(width/3.3, height/1.3, 400, 30)) {
@@ -318,7 +318,7 @@ class Pantalla {
 
     //-----------------------------------------------------
     //Pantalla 4
-    if (aventura.estado==4) {    
+    if (aventura.estadoIgual(4)) {    
       aventura.contador(3);
       //botones 
       if (aventura.contadorClicks >= 1 && aventura.clickRectangulo(width/3, height/1.3, 600, 30)) {
@@ -335,7 +335,7 @@ class Pantalla {
 
     //-----------------------------------------------------
     //Pantalla 5
-    if (aventura.estado==5) {
+    if (aventura.estadoIgual(5)) {
       aventura.contador(3);
       //botones
       if (aventura.clickRectangulo(width/3.3, height/1.3, 500, 30) && aventura.arma == true) {
@@ -354,7 +354,7 @@ class Pantalla {
 
     //-----------------------------------------------------
     //Pantalla 6
-    if (aventura.estado==6) {
+    if (aventura.estadoIgual(6)) {
       aventura.contador(3);
       //botones
       if (aventura.contadorClicks >= 1 && aventura.clickRectangulo(width/2.8, height/1.3, 600, 30)) {
@@ -367,7 +367,7 @@ class Pantalla {
     }
     //-----------------------------------------------------
     //Pantalla 7
-    if (aventura.estado==7) {
+    if (aventura.estadoIgual(7)) {
       aventura.contador(3);
       //botones
       if (aventura.contadorClicks >= 1 && aventura.clickRectangulo(width/3, height/1.3, 600, 30)) {
@@ -380,7 +380,7 @@ class Pantalla {
     }
     //-----------------------------------------------------
     //Pantalla 8
-    if (aventura.estado==8) {
+    if (aventura.estadoIgual(8)) {
       aventura.contador(3);
       //boton estacionamiento
       if (aventura.contadorClicks >= 1 && aventura.clickRectangulo(width/3, height/1.3, 600, 30)) {
@@ -393,7 +393,7 @@ class Pantalla {
     }
     //-----------------------------------------------------
     //Pantalla 9
-    if (aventura.estado==9) {
+    if (aventura.estadoIgual(9)) {
       aventura.contador(5);
       //pase a pantalla11
       if (aventura.contadorClicks >= 4 && aventura.bidon == true && aventura.clickRectangulo (width - 50, height -118, 40, 80)) {
@@ -409,7 +409,7 @@ class Pantalla {
 
     //-----------------------------------------------------
     //Pantalla 10
-    if (aventura.estado==10) {
+    if (aventura.estadoIgual(10)) {
       aventura.contador(4);
       //pase a pantalla12
       if (aventura.contadorClicks >= 2 && aventura.arma == true) {
@@ -425,7 +425,7 @@ class Pantalla {
 
     //-----------------------------------------------------
     //Pantalla 11
-    if (aventura.estado==11) {
+    if (aventura.estadoIgual(11)) {
       aventura.contador(3);
       //botones sigo buscando
       if (aventura.contadorClicks >= 1 && aventura.clickRectangulo(width/2.25, height/1.3, 600, 30)) {
@@ -439,7 +439,7 @@ class Pantalla {
 
     //-----------------------------------------------------
     //Pantalla 12
-    if (aventura.estado==12) {
+    if (aventura.estadoIgual(12)) {
       aventura.contador(4);
       //botones
       if (aventura.contadorClicks >= 1 && aventura.clickRectangulo(width/2.9, height/1.3, 600, 30)) {
@@ -456,7 +456,7 @@ class Pantalla {
 
     //----------------------------------------------------
     //Pantalla 13 //FINALES DE GANASTE
-    if (aventura.estado==13) {
+    if (aventura.estadoIgual(13)) {
       aventura.contador(2);
       //boton "CREDITOS"
       if (aventura.contadorClicks >= 1 && aventura.clickRectangulo(width/2, height/1.2, 400, 30)) {
@@ -471,7 +471,7 @@ class Pantalla {
 
     //-----------------------------------------------------
     //Pantalla 14 //PERDISTE
-    if (aventura.estado==14) {
+    if (aventura.estadoIgual(14)) {
       aventura.contador(2);
       //boton "VOLVER AL INICIO"
       if (aventura.contadorClicks >= 1 && aventura.clickRectangulo(width/2, height/1.2, 400, 30)) {
@@ -486,7 +486,7 @@ class Pantalla {
 
     //-----------------------------------------------------
     //Pantalla 15//creditos
-    if (aventura.estado==99) {
+    if (aventura.estadoIgual(99)) {
       //sonido.pause();
       if (aventura.clickRectangulo(width/2, height/1.2, 400, 30)) {
         aventura.reset();
