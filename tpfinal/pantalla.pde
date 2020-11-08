@@ -30,9 +30,9 @@ class Pantalla {
       //fondo
       tint(v-100, v-100, v);
       if (posY> 0 && posY<80) {
-        image(imagen[1], 0, 80-posY);
+        image(imagen[1], width/2,height/2 + 80-posY);
       } else {
-        image(imagen[1], 0, 0);
+        image(imagen[1], width/2,height/2);
       }
       //imagen[1].resize(width, height);
       fondo(0);  
@@ -149,11 +149,14 @@ class Pantalla {
     //-----------------------------------------------------
     //Pantalla 12
     if (aventura.estadoIgual(12)) {
+      //aventura.minijuego.estados();
+      
       fondo(15);
       panelConBotones();
       detallesEscena(width/2, height/2.4, 50, 50, "No creo que pueda escapar");
+      
     }
-
+        
     //----------------------------------------------------
     //Pantalla 13 //FINALES DE GANASTE
     if (aventura.estadoIgual(13)) {
@@ -185,14 +188,14 @@ class Pantalla {
     if (aventura.estadoIgual(99)) {
       fondo(19);
       //dialogo1
-      imagen[3].resize(200, 0);
+      imagen[3].resize(225, 0);
       tint(255, v-100);  
-      image (imagen[3], 0+120, 0+100);
+      image (imagen[3], 0+220, 0+175);
       noTint();  
       //dialogo2
       imagen[4].resize(60, 0);
       tint(255, v-400);  
-      image (imagen[4], 0+200, 0+250);
+      image (imagen[4], 0+230, 0+265);
       noTint();
 
       //Actualizo variables
@@ -204,6 +207,12 @@ class Pantalla {
         v = 0;
       }
     }
+    
+    //-----------------------------------------------------
+    //Pantalla MINIJUEGO
+    if (aventura.estadoIgual(15)) {
+      aventura.minijuego.estados();
+    }
   }
 
 
@@ -213,7 +222,7 @@ class Pantalla {
   void fondo(int i) { 
     pushStyle();
     rectMode(CENTER);
-    image (imagen[i], 0, 0);
+    image (imagen[i], width/2,height/2);
     //imagen[i].resize(width, height);
     popStyle();
   }
@@ -436,10 +445,23 @@ class Pantalla {
         aventura.reset();
       }
     }
-
+        
     //-----------------------------------------------------
-    //Pantalla 12
+    //Pantalla 12 NUEVA
+    if (aventura.estadoIgual(12)) {      
+      aventura.contador(4);
+      //botones      
+      if (aventura.contadorClicks >= 1 && aventura.clickRectangulo(width/2.65, height/1.3, 600, 30)) {
+        aventura.estado = 15;
+        aventura. reset();
+      }      
+    }
+    /*
+    //-----------------------------------------------------
+    //Pantalla 12 VIEJA
     if (aventura.estadoIgual(12)) {
+      
+      
       aventura.contador(4);
       //botones
       if (aventura.contadorClicks >= 1 && aventura.clickRectangulo(width/2.9, height/1.3, 600, 30)) {
@@ -452,8 +474,9 @@ class Pantalla {
         aventura.estado = 13;
         aventura. reset();
       }
+      
     }
-
+    */
     //----------------------------------------------------
     //Pantalla 13 //FINALES DE GANASTE
     if (aventura.estadoIgual(13)) {
@@ -485,13 +508,19 @@ class Pantalla {
     }
 
     //-----------------------------------------------------
-    //Pantalla 15//creditos
+    //Pantalla 99//creditos
     if (aventura.estadoIgual(99)) {
       //sonido.pause();
       if (aventura.clickRectangulo(width/2, height/1.2, 400, 30)) {
         aventura.reset();
         aventura.estado = 0;
       }
+    }
+    
+     //-----------------------------------------------------
+    //Pantalla MINIJUEGO
+    if (aventura.estadoIgual(15)) {
+      aventura.minijuego.actualizar();
     }
   }
 }

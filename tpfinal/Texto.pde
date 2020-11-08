@@ -208,18 +208,29 @@ class Texto {
         botonesTexto(width/2.6, height/1.3+50, 24, fuenteTexto, "Creo que el refugio no debe estar lejos, puedo ir caminando");
       }
     }
-
+    
     //-----------------------------------------------------
-    //Pantalla 12
+    //Pantalla 12 NUEVA
     if (aventura.estadoIgual(12)) {
       if (aventura.contadorClicks == 0) {
         cuerpoTexto(100, height/1.3, 23, texto[23]);
-      } else if (aventura.contadorClicks >= 1) {
-        botonesTexto(width/2.9, height/1.3, 24, fuenteTexto, "Negocio con ellos y les doy una parte de la comida");
-        botonesTexto(width/4.7, height/1.3+50, 24, fuenteTexto, "Intento salir corriendo");
-        botonesTexto(width/2.65, height/1.3+100, 24, fuenteTexto, "Puedo defenderme con el arma que encontre en el super");
+      } else if (aventura.contadorClicks >= 1) {        
+        botonesTexto(width/2.65, height/1.3, 24, fuenteTexto, "Puedo defenderme con el arma que encontre en el super");        
       }
     }
+    /*
+    //-----------------------------------------------------
+    //Pantalla 12 VIEJA
+    if (aventura.estadoIgual(12)) {
+      if (aventura.contadorClicks == 0) {
+        cuerpoTexto(100, height/1.3, 23, texto[23]);
+      } else if (aventura.contadorClicks >= 1) {        
+        botonesTexto(width/2.9, height/1.3, 24, fuenteTexto, "Negocio con ellos y les doy una parte de la comida");
+        botonesTexto(width/4.7, height/1.3+50, 24, fuenteTexto, "Intento salir corriendo");
+        botonesTexto(width/2.65, height/1.3+100, 24, fuenteTexto, "Puedo defenderme con el arma que encontre en el super");        
+      }
+    }
+    */
 
     //----------------------------------------------------
     //Pantalla 13
@@ -259,7 +270,7 @@ class Texto {
       if (vDialogo > 100 && vDialogo <900) {
         fill(0, 0, 0, vTexto-150);
         textSize(21);
-        text("Autor:   Mariano Quattrocchi \n Prof:   Matias Jauregui ", 220, 160);
+        text("Alumnos: Isabella Pinto\n                            Mariano Quattrocchi\nProf:   Matias Jauregui ", 210, 150);
       }
 
       if (vDialogo > 300 && vDialogo <1000) {

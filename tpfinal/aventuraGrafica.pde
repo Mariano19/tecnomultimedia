@@ -3,6 +3,7 @@ class AventuraGrafica {
   //clases
   Pantalla pantalla;
   Texto texto;
+  Minijuego minijuego;
 
 
   //Variables globales  
@@ -20,6 +21,7 @@ class AventuraGrafica {
     estado = 0;
     texto = new Texto();
     pantalla = new Pantalla();
+    minijuego = new Minijuego();
   }
 
   void actualizar() {    
