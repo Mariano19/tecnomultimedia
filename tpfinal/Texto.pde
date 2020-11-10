@@ -257,7 +257,7 @@ class Texto {
       } 
 
       if (aventura.contadorClicks >= 1) {
-        botonesTexto(width/2, height/1.2, 24, fuenteTitulo, "   volver al inicio   ");
+        botonesTexto(width/2, height/1.2, 24, fuenteTitulo, "   creditos   ");
       }
     }
 
@@ -290,7 +290,7 @@ class Texto {
         textSize(18);
         text("UNLP", 230, 270);
       }
-      botonesTexto(width/2, height/1.2, 24, fuenteTitulo, "    volver al inicio    ");
+      botonesTexto(width/2, height/1.5, 24, fuenteTitulo, "    volver al inicio    ");
 
       //Actualizo variables
       vDialogo += 3;
