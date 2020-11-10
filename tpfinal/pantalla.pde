@@ -4,10 +4,10 @@ class Pantalla {
   float posY;
   int v = 0;
   PImage[] imagen = new PImage[c];
-
+ 
   //CONSTRUCTOR
   Pantalla() {
-
+    
 
     //cargo imagenes
     for (int i = 0; i < c; i++) {    
@@ -497,9 +497,10 @@ class Pantalla {
     if (aventura.estadoIgual(14)) {
       aventura.contador(2);
       //boton "VOLVER AL INICIO"
-      if (aventura.contadorClicks >= 1 && aventura.clickRectangulo(width/2, height/1.2, 400, 30)) {
+      //aventura.clickRectangulo(width/2, height/1.2, 400, 30
+      if (aventura.contadorClicks >= 1 && aventura.clickRectangulo(width/2,height/1.2, 400, 30)) {  
         aventura.reset();
-        aventura.estado = 0;
+        aventura.estado = 99;
         aventura.mapa = false;
         aventura.arma = false;
         aventura.agua = false;
@@ -511,8 +512,9 @@ class Pantalla {
     //Pantalla 99//creditos
     if (aventura.estadoIgual(99)) {
       //sonido.pause();
-      if (aventura.clickRectangulo(width/2, height/1.2, 400, 30)) {
+      if (aventura.clickRectangulo(width/2, height/1.5, 400, 30)) {
         aventura.reset();
+        aventura.minijuego.reset();
         aventura.estado = 0;
       }
     }

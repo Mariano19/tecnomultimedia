@@ -8,19 +8,20 @@ class Minijuego {
   Jugador jugador;
   Enemigo [] enemigo;
 
-   
+
   int velocidadMax = 8;
   int cant= 12; //cantidad enemigos
   int cVivos;
   int estado = 0; //0:menu,1:Jugar,2:Ganar,3:Perder
   PFont fuenteTitulo;
-  PImage fondo,fondo2;
+  PImage fondo, fondo2;
 
 
 
   // CONSTRUCTOR (setup del objeto)  
   // inicializar los objetos: jugador, enemigos, tiempo
   Minijuego() {
+
     //pushStyle();
     //fuenteTitulo = loadFont("PlaneCrash-48.vlw");
     fondo = loadImage("fondo.png");
@@ -29,16 +30,15 @@ class Minijuego {
     tiempo = new Tiempo();
     jugador = new Jugador();
     enemigo = new Enemigo [cant];
-    
+
     imageMode(CENTER);
     textAlign(CENTER, CENTER);
     //textFont(fuenteTitulo);
     textSize(48);
 
     for ( int i = 0; i < cant; i++ ) {      
-      enemigo [i] = new Enemigo(-300-(i*30), 350+(i*5), (int)random(1,velocidadMax));
+      enemigo [i] = new Enemigo(-300-(i*30), 350+(i*5), (int)random(1, velocidadMax));
       if (enemigo[i].vivo == true) cVivos++;
-      
     }
     //popStyle();
   }
@@ -85,13 +85,12 @@ class Minijuego {
     //println(int(random(carriles.length)), carriles[index]);
     //println(enemigo[0].vivo, enemigo[1].vivo, enemigo[2].vivo, enemigo[3].vivo, enemigo[4].vivo, cVivos);
     if (estado == 1) {
-      image(fondo,width/2,height/2);
+      image(fondo, width/2, height/2);
       for ( int i = 0; i < cant; i++ ) {
         enemigo [i].actualizar();
         jugador.actualizar();
-        
       }
-      image(fondo2,width/2,height/2);
+      image(fondo2, width/2, height/2);
       tiempo.actualizar();
       cantidadVivos();
     }
@@ -100,54 +99,63 @@ class Minijuego {
   //GANAR - ESTADO 2
   void ganar() {
     if (estado == 2) {
-      aventura.estado = 13;
+      aventura.estado = 13;    
       /*
       pushStyle();      
-      background(0, 0, 0, 50);
-      fill(200, 0, 0);
-      text("ganaste", width/2, height/2);
-      popStyle();
-      */
+       background(0, 0, 0, 50);
+       fill(200, 0, 0);
+       text("ganaste", width/2, height/2);
+       popStyle();
+       */
     }
   }
 
   //PERDER - ESTADO 3
   void perder() {
     if (estado == 3) {
-      aventura.estado = 14;
+      aventura.estado = 14;      
       /*
       pushStyle();      
-      background(0, 0, 0, 50);
-      fill(200, 0, 0);
-      text("game over", width/2, height/2);
-      popStyle();
-      */
+       background(0, 0, 0, 50);
+       fill(200, 0, 0);
+       text("game over", width/2, height/2);
+       popStyle();
+       */
     }
   }
-  
+
   //EVALUA CANTIDAD DE ENEMIGOS VIVOS-MUERTOS
-   void cantidadVivos(){
-     println(cVivos);
-     cVivos = 0; //cantidad de enemigos vivos  
-     for ( int i = 0; i < enemigo.length; i++ ) {      
-     if (enemigo[i].vivo == true) cVivos++;
-      }  
-      if (cVivos == 0) estado=2;
-   }
-   
- 
+  void cantidadVivos() {
+    println(cVivos);
+    cVivos = 0; //cantidad de enemigos vivos  
+    for ( int i = 0; i < enemigo.length; i++ ) {      
+      if (enemigo[i].vivo == true) cVivos++;
+    }  
+    if (cVivos == 0) estado=2;
+  }
+
+
 
   //EVALUA COLISIONES DEL MOUSE CON ENEMIGOS
   void colisiones() {
     //println(cant, mouseX, mouseY, enemigo[0].x,contador,enemigo[0].vivo);    
     for ( int i = 0; i < enemigo.length; i++ ) {      
       if (mouseButton == LEFT && mouseX > enemigo[i].x-25 && mouseX < enemigo[i].x+25 && mouseY > enemigo[i].y-40 && mouseY < enemigo[i].y+40) {
-        enemigo[i].morir();  
-        
+        enemigo[i].morir();
       }
-      
+
       //if (enemigo[i].vivo == true) cVivos++;
       //if (enemigo[i].vivo == false ) estado = 2;
     }
+  }
+
+  void reset() {
+    for ( int i = 0; i < cant; i++ ){
+    enemigo[i].reset();
+    enemigo [i] = new Enemigo(-300-(i*30), 350+(i*5), (int)random(1, velocidadMax));
+  }
+    velocidadMax = 8;
+    cant= 12; //cantidad enemigos      
+    estado = 0; //0:menu,1:Jugar,2:Ganar,3:Perder
   }
 }
