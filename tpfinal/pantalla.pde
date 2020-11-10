@@ -383,7 +383,7 @@ class Pantalla {
         aventura.estado = 13;
         aventura.reset();
       } else if (aventura.contadorClicks >= 1 && aventura.clickRectangulo(width/3.6, height/1.3+50, 600, 30)) {
-        aventura.estado = 15;
+        aventura.estado = 14;
         aventura.reset();
       }
     }
@@ -441,7 +441,7 @@ class Pantalla {
         aventura.estado = 13;
         aventura.reset();
       } else if (aventura.contadorClicks >= 1 && aventura.clickRectangulo(width/2.6, height/1.3+50, 600, 30)) {
-        aventura.estado = 15;
+        aventura.estado = 14;
         aventura.reset();
       }
     }
