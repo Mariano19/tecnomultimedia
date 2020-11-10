@@ -52,4 +52,8 @@ class Enemigo {
     vivo = false;
   }
   
+  void reset(){
+    vivo = true;
+     c = 0;
+  }
 }
