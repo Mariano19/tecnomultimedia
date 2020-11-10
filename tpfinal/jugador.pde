@@ -50,5 +50,6 @@ class Jugador {
   void disparar() {
     if (mousePressed && aventura.minijuego.estado==1) /*disparo.play()*/;
   }
-
+  
+  
 }
