@@ -1,10 +1,9 @@
-import ddf.minim.*;
+
 import ddf.minim.analysis.*;
 import ddf.minim.effects.*;
 import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
-
 import ddf.minim.*;
 
 
@@ -39,7 +38,7 @@ AventuraGrafica aventura;
 
 void setup() {  
   size( 1024, 768);
-  surface.setResizable(true);
+  //surface.setResizable(true);
   aventura = new AventuraGrafica();
   
   minim = new Minim(this);

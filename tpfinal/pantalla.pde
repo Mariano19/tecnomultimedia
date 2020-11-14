@@ -12,6 +12,8 @@ class Pantalla {
     //cargo imagenes
     for (int i = 0; i < c; i++) {    
       imagen[i] = loadImage("imagen-" + i + ".png");
+      imagen[i].resize(width,height);
+      
     }
   }
 

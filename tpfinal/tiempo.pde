@@ -14,7 +14,7 @@ class Tiempo {
   }
 
   void reseteo(){
-    if (aventura.minijuego.estado == 0) t = millis() + ms;
+    if (aventura.minijuego.estado == 1) t = millis() + ms;
    }
 
 

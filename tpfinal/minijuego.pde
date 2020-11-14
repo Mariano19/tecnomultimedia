@@ -12,7 +12,7 @@ class Minijuego {
   int velocidadMax = 8;
   int cant= 12; //cantidad enemigos
   int cVivos;
-  int estado = 0; //0:menu,1:Jugar,2:Ganar,3:Perder
+  int estado = 1; //0:menu,1:Jugar,2:Ganar,3:Perder
   PFont fuenteTitulo;
   PImage fondo, fondo2;
 
@@ -46,7 +46,7 @@ class Minijuego {
 
   // METODOS (funciones)
   void estados() {
-    menu();
+    //menu();
     jugar();
     ganar();
     perder();
@@ -160,6 +160,6 @@ class Minijuego {
   }
     velocidadMax = 8;
     cant= 12; //cantidad enemigos      
-    estado = 0; //0:menu,1:Jugar,2:Ganar,3:Perder
+    estado = 1; //0:menu,1:Jugar,2:Ganar,3:Perder
   }
 }
