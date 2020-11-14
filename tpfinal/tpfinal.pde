@@ -1,4 +1,11 @@
 import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
+
+import ddf.minim.*;
 
 
 /*   ctrl+r ctrl+t ctrl+espacio
@@ -21,8 +28,12 @@ import ddf.minim.*;
  */
 //sonido
 Minim minim;
-AudioPlayer sonido;
-AudioSample sonido2;
+
+AudioPlayer musica;
+AudioPlayer tiro;
+AudioPlayer click;
+
+
 
 AventuraGrafica aventura;
 
@@ -32,8 +43,10 @@ void setup() {
   aventura = new AventuraGrafica();
   
   minim = new Minim(this);
-  sonido = minim.loadFile("musica.mp3",2048);
-  sonido2 = minim.loadSample("musica.mp3",512);  
+  musica = minim.loadFile("musica.mp3",2048);
+  click = minim.loadFile("click.wav",1024);
+  tiro=minim.loadFile("tiro.mp3",1024);
+  aventura.musica();
 }
 
 void draw() {  

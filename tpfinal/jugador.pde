@@ -7,7 +7,7 @@ class Jugador {
   float x, y, vel;
   PImage[] arma = new PImage[4];
   PImage aim;
-  
+
 
 
   // CONSTRUCTOR // metodo/funcion inicial (el "setup" del objeto)
@@ -39,7 +39,7 @@ class Jugador {
   //--Dibuja la mira
   void dibujar() {   
     noCursor();
-    image(aim,mouseX,mouseY);
+    image(aim, mouseX, mouseY);
     if (mouseX > width/2 && mousePressed == false) image(arma [0], x, y);
     if (mouseX < width/2 && mousePressed == false) image(arma [3], x, y);
     if (mouseX > width/2 && mousePressed)image(arma [1], x, y);
@@ -48,8 +48,8 @@ class Jugador {
 
 
   void disparar() {
-    if (mousePressed && aventura.minijuego.estado==1) /*disparo.play()*/;
+    if (mousePressed && aventura.minijuego.estado==1) { 
+      aventura.sonidoDisparo();
+    }
   }
-  
-  
 }

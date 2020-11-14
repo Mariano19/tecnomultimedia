@@ -4,6 +4,7 @@ class AventuraGrafica {
   Pantalla pantalla;
   Texto texto;
   Minijuego minijuego;
+  Sonido sonido;
 
 
   //Variables globales  
@@ -22,6 +23,19 @@ class AventuraGrafica {
     texto = new Texto();
     pantalla = new Pantalla();
     minijuego = new Minijuego();
+    sonido = new Sonido();
+  }
+  
+  void musica(){
+    sonido.musica();
+  }
+  
+    void playInteraccion(){
+    sonido.playInteraccion();
+  }
+  
+  void sonidoDisparo(){
+    sonido.tiro();
   }
 
   void actualizar() {    
@@ -31,7 +45,10 @@ class AventuraGrafica {
 
   void clickPantalla() {
     pantalla.clickPantalla();
+    playInteraccion();
   }
+  
+
 
   //FUNCIONES GLOBALES  
 
@@ -77,9 +94,6 @@ class AventuraGrafica {
     contadorClicks = 0;
   }
 
-  //int devolverEstado() {
-  //  return estado;
-  //}
 
   boolean estadoIgual(int aux) {
     if (estado==aux) {

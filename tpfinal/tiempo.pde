@@ -25,6 +25,7 @@ class Tiempo {
       rect( 0, 0, map( t-millis(), reset, reset+ms, 0, width*2 ), height/15 );
       fill (255); 
       text(t-millis(),width/2,height/25);
+      
       //println(t-millis(), reset,reset+ms);
     }    
   }

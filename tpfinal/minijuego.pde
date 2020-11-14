@@ -88,9 +88,13 @@ class Minijuego {
       image(fondo, width/2, height/2);
       for ( int i = 0; i < cant; i++ ) {
         enemigo [i].actualizar();
-        jugador.actualizar();
+        //jugador.actualizar();
       }
       image(fondo2, width/2, height/2);
+      for ( int i = 0; i < cant; i++ ) {
+        //enemigo [i].actualizar();
+        jugador.actualizar();
+      }
       tiempo.actualizar();
       cantidadVivos();
     }
