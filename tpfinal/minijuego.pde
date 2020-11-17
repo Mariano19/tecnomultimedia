@@ -55,7 +55,7 @@ class Minijuego {
   void actualizar() {
     colisiones();
     jugador.disparar();
-    tiempo.reseteo();
+    //tiempo.reseteo();
     //juego.cantidadVivos();
   }
 
@@ -161,5 +161,7 @@ class Minijuego {
     velocidadMax = 8;
     cant= 12; //cantidad enemigos      
     estado = 1; //0:menu,1:Jugar,2:Ganar,3:Perder
+    //tiempo.t = millis() + tiempo.ms;
+    tiempo.reseteo();
   }
 }

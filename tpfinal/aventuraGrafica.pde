@@ -92,6 +92,7 @@ class AventuraGrafica {
     pantalla.v = 0;
     pantalla.posY = 0;
     contadorClicks = 0;
+    minijuego.reset();
   }
 
 

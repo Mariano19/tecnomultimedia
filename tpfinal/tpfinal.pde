@@ -29,9 +29,9 @@ import ddf.minim.*;
 //sonido
 Minim minim;
 
-//AudioPlayer musica;
-//AudioPlayer tiro;
-//AudioPlayer click;
+AudioPlayer musica;
+AudioPlayer tiro;
+AudioPlayer click;
 
 AventuraGrafica aventura;
 
@@ -40,9 +40,9 @@ void setup() {
   aventura = new AventuraGrafica();
   
   minim = new Minim(this);
-  //musica = minim.loadFile("musica.mp3",2048);
-  //click = minim.loadFile("click.wav",1024);
-  //tiro=minim.loadFile("tiro.mp3",1024);
+  musica = minim.loadFile("musica.mp3",2048);
+  click = minim.loadFile("click.wav",1024);
+  tiro=minim.loadFile("tiro.mp3",1024);
   aventura.musica();
 }
 
