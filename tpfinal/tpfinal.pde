@@ -36,7 +36,8 @@ AudioPlayer click;
 AventuraGrafica aventura;
 
 void setup() {  
-  size( 1024, 768);
+  //size( 1024, 768);
+  size(800,600);
   aventura = new AventuraGrafica();
   
   minim = new Minim(this);
