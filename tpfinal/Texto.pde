@@ -76,7 +76,7 @@ class Texto {
         if (aventura.contadorClicks==0) {
           textFont(fuenteCredito);
           textAlign(LEFT);
-          textSize(30);
+          textSize(height/25);
           fill(230);
           text(texto[0], 100, height/1.3);
         } else if (aventura.contadorClicks == i) {
