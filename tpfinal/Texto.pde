@@ -80,7 +80,7 @@ class Texto {
           fill(230);
           text(texto[0], 100, height/1.3);
         } else if (aventura.contadorClicks == i) {
-          cuerpoTexto(100, height/1.3, 23, texto[i]);
+          cuerpoTexto(100, height/1.32, height/33, texto[i]);
         }
       }
     }
@@ -90,15 +90,15 @@ class Texto {
     if (aventura.estadoIgual(2)) {
       //texto
       if (aventura.contadorClicks == 0) {
-        cuerpoTexto(100, height/1.3, 23, texto[4]);
+        cuerpoTexto(100, height/1.3, height/30, texto[4]);
       } else if (aventura.contadorClicks >= 1 && (aventura.agua == false || aventura.mapa == false)) {
-        cuerpoTexto(100, height/1.3, 23, texto[5]);
+        cuerpoTexto(100, height/1.3, height/30, texto[5]);
       }
       //botones
       if (aventura.contadorClicks >= 1 && aventura.mapa == true && aventura.agua == true) {
-        botonesTexto(width/2.6, height/1.3, 24, fuenteTexto, "Me siento seguro en mi casa, voy al super a buscar comida");
-        botonesTexto(width/3.75, height/1.3+50, 24, fuenteTexto, "Deberia ir al centro de refugiados");
-        botonesTexto(width/2.95, height/1.3+100, 24, fuenteTexto, "Mmm parece que va a llover, mejor voy mañana");
+        botonesTexto(width/2.6, height/1.3, height/29, fuenteTexto, "Me siento seguro en mi casa, voy al super a buscar comida");
+        botonesTexto(width/3.75, height/1.3+50, height/29, fuenteTexto, "Deberia ir al centro de refugiados");
+        botonesTexto(width/2.95, height/1.3+100, height/29, fuenteTexto, "Mmm parece que va a llover, mejor voy mañana");
       }
     }
 
@@ -106,12 +106,12 @@ class Texto {
     //Pantalla 3
     if (aventura.estadoIgual(3)) {
       if (aventura.contadorClicks == 0) {
-        cuerpoTexto(100, height/1.3, 23, texto[6]);
+        cuerpoTexto(100, height/1.3,height/30, texto[6]);
       } else if (aventura.contadorClicks == 1) {
-        cuerpoTexto(100, height/1.3, 23, texto[7]);
+        cuerpoTexto(100, height/1.3, height/30, texto[7]);
       } else if (aventura.contadorClicks >= 2) {
-        botonesTexto(width/3.3, height/1.3, 24, fuenteTexto, "Mejor me apuro a llegar al supermercado");
-        botonesTexto(width/4.7, height/1.3+50, 24, fuenteTexto, "Voy a mirar que paso ");
+        botonesTexto(width/3.3, height/1.3, height/29, fuenteTexto, "Mejor me apuro a llegar al supermercado");
+        botonesTexto(width/4.7, height/1.3+50, height/29, fuenteTexto, "Voy a mirar que paso ");
       }
     }
 
@@ -119,11 +119,11 @@ class Texto {
     //Pantalla 4
     if (aventura.estadoIgual(4)) {
       if (aventura.contadorClicks == 0) {
-        cuerpoTexto(100, height/1.3, 23, texto[8]);
+        cuerpoTexto(100, height/1.3, height/30, texto[8]);
       } else if (aventura.contadorClicks == 1) {
-        botonesTexto(width/3, height/1.3, 24, fuenteTexto, "Lo mejor es ir caminando asi paso desapercibido");
-        botonesTexto(width/3.1, height/1.3+50, 24, fuenteTexto, "Buscar un auto en la vieja estacion de servicio");
-        botonesTexto(width/3, height/1.3+100, 24, fuenteTexto, "Buscar un auto en el estacionamiento del centro");
+        botonesTexto(width/3, height/1.3, height/29, fuenteTexto, "Lo mejor es ir caminando asi paso desapercibido");
+        botonesTexto(width/3.1, height/1.3+50, height/29, fuenteTexto, "Buscar un auto en la vieja estacion de servicio");
+        botonesTexto(width/3, height/1.3+100, height/29, fuenteTexto, "Buscar un auto en el estacionamiento del centro");
       }
     }
 
@@ -131,12 +131,12 @@ class Texto {
     //Pantalla 5
     if (aventura.estadoIgual(5)) {
       if (aventura.contadorClicks == 0) {
-        cuerpoTexto(100, height/1.3, 23, texto[9]);
+        cuerpoTexto(100, height/1.3, height/30, texto[9]);
       } else if (aventura.contadorClicks >= 1 && aventura.arma == false) {
-        cuerpoTexto(100, height/1.3, 23, texto[10]);
+        cuerpoTexto(100, height/1.3, height/30, texto[10]);
       } else if (aventura.contadorClicks >= 1 && aventura.arma == true) {
-        botonesTexto(width/3.3, height/1.3, 24, fuenteTexto, "Sigo en el super buscando mas suministros");
-        botonesTexto(width/2.6, height/1.3+50, 24, fuenteTexto, "Me vuelvo antes de anochecer, con lo que tengo me alcanza");
+        botonesTexto(width/3.3, height/1.3, height/29, fuenteTexto, "Sigo en el super buscando mas suministros");
+        botonesTexto(width/2.6, height/1.3+50, height/29, fuenteTexto, "Me vuelvo antes de anochecer, con lo que tengo me alcanza");
       }
     }
 
@@ -144,45 +144,45 @@ class Texto {
     //Pantalla 6
     if (aventura.estadoIgual(6)) {
       if (aventura.contadorClicks == 0) {
-        cuerpoTexto(100, height/1.3, 23, texto[11]);
+        cuerpoTexto(100, height/1.3, height/30, texto[11]);
       } else if (aventura.contadorClicks >= 1) {
-        botonesTexto(width/2.8, height/1.3, 24, fuenteTexto, "Lo ayudo y le acerco un poco de agua de mi mochila");
-        botonesTexto(width/3.35, height/1.3+50, 24, fuenteTexto, "Mejor sigo, no tengo que perder tiempo");
+        botonesTexto(width/2.8, height/1.3, height/29, fuenteTexto, "Lo ayudo y le acerco un poco de agua de mi mochila");
+        botonesTexto(width/3.35, height/1.3+50, height/29, fuenteTexto, "Mejor sigo, no tengo que perder tiempo");
       }
     }
     //-----------------------------------------------------
     //Pantalla 7
     if (aventura.estadoIgual(7)) {
       if (aventura.contadorClicks == 0) {
-        cuerpoTexto(100, height/1.3, 23, texto[12]);
+        cuerpoTexto(100, height/1.3, height/30, texto[12]);
       } else if (aventura.contadorClicks == 1) {
-        cuerpoTexto(100, height/1.3, 23, texto[13]);
+        cuerpoTexto(100, height/1.3, height/30, texto[13]);
       } else if (aventura.contadorClicks >= 2) {
-        botonesTexto(width/3, height/1.3, 24, fuenteTexto, "Confio en el mapa que traje y sigo caminando ");
-        botonesTexto(width/3.6, height/1.3+50, 24, fuenteTexto, "Tomo el camino que indica el cartel");
+        botonesTexto(width/3, height/1.3, height/29, fuenteTexto, "Confio en el mapa que traje y sigo caminando ");
+        botonesTexto(width/3.6, height/1.3+50, height/29, fuenteTexto, "Tomo el camino que indica el cartel");
       }
     }
     //-----------------------------------------------------
     //Pantalla 8
     if (aventura.estadoIgual(8)) {
       if (aventura.contadorClicks == 0) {
-        cuerpoTexto(100, height/1.3, 23, texto[14]);
+        cuerpoTexto(100, height/1.3, height/30, texto[14]);
       } else if (aventura.contadorClicks >= 1) {
-        botonesTexto(width/3, height/1.3, 24, fuenteTexto, "Sigo buscando algun auto en el estacionamiento");
-        botonesTexto(width/2.7, height/1.3+50, 24, fuenteTexto, "El refugio no debe estar muy lejos, puedo ir caminando");
+        botonesTexto(width/3, height/1.3, height/29, fuenteTexto, "Sigo buscando algun auto en el estacionamiento");
+        botonesTexto(width/2.7, height/1.3+50, height/29, fuenteTexto, "El refugio no debe estar muy lejos, puedo ir caminando");
       }
     }
     //-----------------------------------------------------
     //Pantalla 9
     if (aventura.estadoIgual(9)) {
       if (aventura.contadorClicks == 0) {
-        cuerpoTexto(100, height/1.3, 23, texto[15]);
+        cuerpoTexto(100, height/1.3, height/30, texto[15]);
       } else if (aventura.contadorClicks == 1) {
-        cuerpoTexto(100, height/1.3, 23, texto[16]);
+        cuerpoTexto(100, height/1.3, height/30, texto[16]);
       } else if (aventura.contadorClicks >= 2 && aventura.bidon == false) {
-        cuerpoTexto(100, height/1.3, 23, texto[17]);
+        cuerpoTexto(100, height/1.3, height/30, texto[17]);
       } else if (aventura.contadorClicks >= 2 && aventura.bidon == true) {
-        cuerpoTexto(100, height/1.3, 23, texto[18]);
+        cuerpoTexto(100, height/1.3, height/30, texto[18]);
       }
     }
 
@@ -190,11 +190,11 @@ class Texto {
     //Pantalla 10
     if (aventura.estadoIgual(10)) {
       if (aventura.contadorClicks == 0) {
-        cuerpoTexto(100, height/1.3, 23, texto[19]);
+        cuerpoTexto(100, height/1.3, height/30, texto[19]);
       } else if (aventura.contadorClicks >= 1 && aventura.arma == false) {
-        cuerpoTexto(100, height/1.3, 23, texto[20]);
+        cuerpoTexto(100, height/1.3, height/30, texto[20]);
       } else if (aventura.contadorClicks >= 1 && aventura.arma == true) {
-        cuerpoTexto(100, height/1.3, 23, texto[21]);
+        cuerpoTexto(100, height/1.3, height/30, texto[21]);
       }
     }
 
@@ -202,10 +202,10 @@ class Texto {
     //Pantalla 11
     if (aventura.estadoIgual(11)) {
       if (aventura.contadorClicks == 0) {
-        cuerpoTexto(100, height/1.3, 23, texto[22]);
+        cuerpoTexto(100, height/1.3, height/30, texto[22]);
       } else if (aventura.contadorClicks >= 1) {
-        botonesTexto(width/2.25, height/1.3, 24, fuenteTexto, "Uso el bidon de combustible que habia encontrado en el estacionamiento");
-        botonesTexto(width/2.6, height/1.3+50, 24, fuenteTexto, "Creo que el refugio no debe estar lejos, puedo ir caminando");
+        botonesTexto(width/2.25, height/1.3, height/29, fuenteTexto, "Uso el bidon de combustible que habia encontrado en el estacionamiento");
+        botonesTexto(width/2.6, height/1.3+50, height/29, fuenteTexto, "Creo que el refugio no debe estar lejos, puedo ir caminando");
       }
     }
     
@@ -213,9 +213,9 @@ class Texto {
     //Pantalla 12 NUEVA
     if (aventura.estadoIgual(12)) {
       if (aventura.contadorClicks == 0) {
-        cuerpoTexto(100, height/1.3, 23, texto[23]);
+        cuerpoTexto(100, height/1.3, height/30, texto[23]);
       } else if (aventura.contadorClicks >= 1) {        
-        botonesTexto(width/2.65, height/1.3, 24, fuenteTexto, "Puedo defenderme con el arma que encontre en el super");        
+        botonesTexto(width/2.65, height/1.3, height/29, fuenteTexto, "Puedo defenderme con el arma que encontre en el super");        
       }
     }
     /*
@@ -237,14 +237,14 @@ class Texto {
     if (aventura.estadoIgual(13)) {
       if (  aventura.contadorClicks == 0 && aventura.bidon == true) {
         //panelConBotones();
-        cuerpoTexto(100, height/1.3, 23, texto[24]);
+        cuerpoTexto(100, height/1.3, height/30, texto[24]);
       }
       if (aventura.contadorClicks == 0 && aventura.bidon == false) {
         //panelConBotones();
-        cuerpoTexto(100, height/1.3, 23, texto[25]);
+        cuerpoTexto(100, height/1.3, height/30, texto[25]);
       } 
       if (aventura.contadorClicks >= 1) {
-        botonesTexto(width/2, height/1.2, 24, fuenteTitulo, "   creditos   ");
+        botonesTexto(width/2, height/1.2, height/29, fuenteTitulo, "   creditos   ");
       }
     }
 
@@ -253,11 +253,11 @@ class Texto {
     if (aventura.estadoIgual(14)) {
       if (aventura.contadorClicks == 0) {
         //panelConBotones();
-        cuerpoTexto(100, height/1.3, 23, texto[26]);
+        cuerpoTexto(100, height/1.3, height/30, texto[26]);
       } 
 
       if (aventura.contadorClicks >= 1) {
-        botonesTexto(width/2, height/1.2, 24, fuenteTitulo, "   creditos   ");
+        botonesTexto(width/2, height/1.2, height/29, fuenteTitulo, "   creditos   ");
       }
     }
 
