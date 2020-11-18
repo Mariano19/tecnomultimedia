@@ -37,7 +37,7 @@ AventuraGrafica aventura;
 
 void setup() {  
   //size( 1024, 768);
-  size(800,600);
+  size(1024,768);
   aventura = new AventuraGrafica();
   
   minim = new Minim(this);

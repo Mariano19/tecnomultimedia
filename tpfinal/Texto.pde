@@ -270,27 +270,27 @@ class Texto {
       if (vDialogo > 100 && vDialogo <900) {
         fill(0, 0, 0, vTexto-150);
         textSize(21);
-        text("Alumnos: Isabella Pinto\n                            Mariano Quattrocchi\nProf:   Matias Jauregui ", 210, 150);
+        text("Alumnos: Isabella Pinto\n                            Mariano Quattrocchi\nProf:   Matias Jauregui ", width/5, height/5.8);
       }
 
       if (vDialogo > 300 && vDialogo <1000) {
         fill(0, 0, 0, vTexto-300);
         textSize(18);
-        text("Com. 2", 230, 270);
+        text("Com. 2", width/4.5, height/2.85);
       }
 
       if (vDialogo > 1000) {
         fill(0, 0, 0, vTexto-700);
         textSize(21);
-        text("Tecnologia \n Multimedial I", 220, 160);
+        text("Tecnologia \n Multimedial I", width/4.5, height/5);
       }
 
       if (vDialogo > 1200 ) {
         fill(0, 0, 0, vTexto-800);
         textSize(18);
-        text("UNLP", 230, 270);
+        text("UNLP", width/4.5, height/2.85);
       }
-      botonesTexto(width/2, height/1.5, 24, fuenteTitulo, "    volver al inicio    ");
+      botonesTexto(width/5, height-150, 24, fuenteTitulo, "    volver al inicio    ");
 
       //Actualizo variables
       vDialogo += 3;

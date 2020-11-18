@@ -37,7 +37,7 @@ class Minijuego {
     textSize(48);
 
     for ( int i = 0; i < cant; i++ ) {      
-      enemigo [i] = new Enemigo(-300-(i*30), height/2.20+(i*5), (int)random(1, velocidadMax));
+      enemigo [i] = new Enemigo(-300-(i*30), height/2.20+(i*5), (int)random(2, velocidadMax));
       if (enemigo[i].vivo == true) cVivos++;
     }
     //popStyle();

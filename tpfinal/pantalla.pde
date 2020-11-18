@@ -43,7 +43,7 @@ class Pantalla {
       float i = random(0, 20);
       if (i > 18 && frameCount >100) {
         fill(150, 100, 0);
-        rect(405, 444, 10, 38, 2);
+        rect(width/2.53, height/1.73, 10, 38, 2);
       }
       noTint();        
       //sonido.loop();
@@ -192,12 +192,12 @@ class Pantalla {
       //dialogo1
       imagen[3].resize(225, 0);
       tint(255, v-100);  
-      image (imagen[3], 0+220, 0+175);
+      image (imagen[3], width/4.6, height/5);
       noTint();  
       //dialogo2
       imagen[4].resize(60, 0);
       tint(255, v-400);  
-      image (imagen[4], 0+230, 0+265);
+      image (imagen[4], width/4.5, height/2.9);
       noTint();
 
       //Actualizo variables
@@ -514,7 +514,7 @@ class Pantalla {
     //Pantalla 99//creditos
     if (aventura.estadoIgual(99)) {
       //sonido.pause();
-      if (aventura.clickRectangulo(width/2, height/1.5, 400, 30)) {
+      if (aventura.clickRectangulo(width/5, height-150, 400, 30)) {
         aventura.reset();
         aventura.minijuego.reset();
         aventura.estado = 0;
